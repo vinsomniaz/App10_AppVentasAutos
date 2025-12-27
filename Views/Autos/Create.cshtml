@@ -1,0 +1,38 @@
+﻿@model App10_AppVentasAutos.Models.Auto
+
+<h2>Registrar Venta</h2>
+
+<form asp-action="Create" method="post">
+	<div class="mb-2">
+		<label>Marca</label>
+		<input asp-for="Marca" class="form-control" />
+		<span asp-validation-for="Marca" class="text-danger"></span>
+	</div>
+
+	<div class="mb-2">
+		<label>Modelo</label>
+		<input asp-for="Modelo" class="form-control" />
+	</div>
+
+	<div class="mb-2">
+		<label>Año</label>
+		<input asp-for="Anio" class="form-control" />
+	</div>
+
+	<div class="mb-2">
+		<label>Precio</label>
+		<input asp-for="Precio" class="form-control" />
+	</div>
+
+	<div class="mb-2">
+		<label>Color</label>
+		<input asp-for="Color" class="form-control" />
+	</div>
+
+	<div class="mb-2">
+		<input asp-for="EsNuevo" /> ¿Es nuevo?
+	</div>
+
+	<button class="btn btn-success">Guardar</button>
+</form>
+

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<App10_AppVentasAutos.Models.Auto>
+
+<h2>Listado de Autos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Precio</th>
+            <th>Color</th>
+            <th>Nuevo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.Marca</td>
+                <td>@a.Modelo</td>
+                <td>@a.Anio</td>
+                <td>@a.Precio</td>
+                <td>@a.Color</td>
+                <td>@(a.EsNuevo ? "Nuevo" : "Usado")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Crear</a>
